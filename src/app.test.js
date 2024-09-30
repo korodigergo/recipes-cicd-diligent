@@ -16,7 +16,7 @@ it('should display the heading', async () => {
 
 it('should display recipe list text, if the show recipes button clicked', async () => {
   const container = render();
-  const showRecipesButton = getByRole(container, 'button', { name: 'Show Recipes' });
+  const showRecipesButton = getByRole(container, 'button', { name: 'Show Recipeses' });
   await userEvent.click(showRecipesButton);
 
   const recipeList = await findByText(container, 'Recipe List');
