@@ -25,7 +25,7 @@ function element(tag, attributes = {}, children = []) {
 
 function createContainer({ onShow }) {
   const container = element('div', { class: 'container' }, [
-    element('h1', {}, ['My Recipess']),
+    element('h1', {}, ['My Recipes']),
     element('button', { class: 'btn btn-primary', onClick: onShow }, ['Show Recipes']),
     element('div', { id: 'recipeList' }),
   ])
@@ -42,7 +42,7 @@ export function setupApp(root) {
     
     
     if (isVisible) {      
-      list?.appendChild(element('p', {}, ['Recipe List']));
+      list?.appendChild(element('p', {}, ['Recipes List']));
     } else {
       list.innerText = '';
     }
