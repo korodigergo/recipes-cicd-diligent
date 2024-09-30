@@ -25,7 +25,7 @@ function element(tag, attributes = {}, children = []) {
 
 function createContainer({ onShow }) {
   const container = element('div', { class: 'container' }, [
-    element('h1', {}, ['My Recipes']),
+    element('h1', {}, ['My Recipess']),
     element('button', { class: 'btn btn-primary', onClick: onShow }, ['Show Recipes']),
     element('div', { id: 'recipeList' }),
   ])
