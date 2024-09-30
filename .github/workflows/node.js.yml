@@ -12,8 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [v22.9.0]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [22.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -35,8 +34,8 @@ jobs:
       run: npm run build
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-main@v3
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
-        publish_branch: main
+        publish_branch: gh-pages
