@@ -41,8 +41,12 @@ export function setupApp(root) {
     const list = event.target.parentNode.querySelector('#recipeList');
     
     
-    if (isVisible) {      
-      list?.appendChild(element('p', {}, ['Recipes List']));
+    if (isVisible) {    
+      for(const recipe of getRecipes()){
+
+        list?.appendChild(element('h1', {}, [recipe.name]));
+        list?.appendChild(element('h2', {}, [recipe.servings]));
+      }  
     } else {
       list.innerText = '';
     }
