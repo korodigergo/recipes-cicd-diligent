@@ -3,8 +3,8 @@
 ## 1. Build the application
 
 - Figure out which Vite command can build the application to production ready code and try it locally.
-- In which folder the build artifacts are found?
-- How differs the built JS and HTML files from the source files?
+- In which folder the build artifacts are found?  -dist folder
+- How differs the built JS and HTML files from the source files? -js file script is in the head
 - You can serve the production files with the `npm run preview` command.
 
 ## 2. Deploy the page to GitHub Pages
