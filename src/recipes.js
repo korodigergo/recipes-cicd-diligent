@@ -62,6 +62,52 @@ export function getRecipes() {
         ],
         "servings": 12,
         "preparation_time": "25 minutes"
+      },
+      {
+        "name": "Chocolate Chip Cookies",
+        "ingredients": [
+          {"item": "all-purpose flour", "quantity": "250g"},
+          {"item": "butter", "quantity": "100g"},
+          {"item": "sugar", "quantity": "150g"},
+          {"item": "chocolate chips", "quantity": "200g"},
+          {"item": "eggs", "quantity": "1"},
+          {"item": "baking powder", "quantity": "1 tsp"},
+          {"item": "vanilla extract", "quantity": "1 tsp"},
+          {"item": "salt", "quantity": "1/4 tsp"}
+        ],
+        "instructions": [
+          "Preheat the oven to 180°C (350°F).",
+          "Cream the butter and sugar together.",
+          "Add the egg and vanilla extract, mix well.",
+          "Combine the flour, baking powder, and salt.",
+          "Stir in the chocolate chips.",
+          "Drop spoonfuls of the dough onto a baking sheet and bake for 10-12 minutes."
+        ],
+        "servings": 12,
+        "preparation_time": "25 minutes"
+      },
+      {
+        "name": "Chocolate Chip Cookies",
+        "ingredients": [
+          {"item": "all-purpose flour", "quantity": "250g"},
+          {"item": "butter", "quantity": "100g"},
+          {"item": "sugar", "quantity": "150g"},
+          {"item": "chocolate chips", "quantity": "200g"},
+          {"item": "eggs", "quantity": "1"},
+          {"item": "baking powder", "quantity": "1 tsp"},
+          {"item": "vanilla extract", "quantity": "1 tsp"},
+          {"item": "salt", "quantity": "1/4 tsp"}
+        ],
+        "instructions": [
+          "Preheat the oven to 180°C (350°F).",
+          "Cream the butter and sugar together.",
+          "Add the egg and vanilla extract, mix well.",
+          "Combine the flour, baking powder, and salt.",
+          "Stir in the chocolate chips.",
+          "Drop spoonfuls of the dough onto a baking sheet and bake for 10-12 minutes."
+        ],
+        "servings": 12,
+        "preparation_time": "25 minutes"
       }
     ]
 }

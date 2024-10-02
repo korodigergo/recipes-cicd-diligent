@@ -25,18 +25,12 @@ function element(tag, attributes = {}, children = []) {
 function createContainer({ onShow }) {
   const container = element("div", { class: "container" }, [
     element("h1", {}, ["My Recipes"]),
-    element("button", { class: "btn btn-primary", onClick: onShow }, [
+    element("button", { class: "btn btn-primary mb-3", onClick: onShow }, [
       "Show Recipes",
     ]),
-    element("div", { id: "recipeList" }),
+    element("div", { id: "recipeList", class: "d-flex flex-wrap gap-3" }), // Use flex-wrap for wrapping cards
   ]);
   return container;
-}
-
-function showIngredients(ingredients){
-  for(const ingredient of ingredients){
-
-  }
 }
 
 export function setupApp(root) {
@@ -47,21 +41,31 @@ export function setupApp(root) {
     const list = event.target.parentNode.querySelector("#recipeList");
 
     if (isVisible) {
+      list.innerHTML = ""; 
+
       for (const recipe of getRecipes()) {
         list?.appendChild(
-          element("div", { class: "card my-3" }, [
+          element("div", { class: "card col-12 col-sm-6 col-md-4" }, [
             element("div", { class: "card-body" }, [
               element("h5", { class: "card-title" }, [recipe.name]),
-              element("h5", { class: "card-subtitle mb-2 text-muted" }, ['Ingredients']),
-              element("ul", { class: "card-body" }, recipe.ingredients.map((ingredient) => element('li', {}, [`${ingredient.quantity} ${ingredient.item}`]))),
-              element("h5", { class: "card-subtitle mb-2 text-muted" }, ['Instructions']),
-              element("ul", { class: "card-body" }, recipe.instructions.map((instruction) => element('li', {}, [instruction])))
+              element("h6", { class: "card-subtitle mb-2 text-muted" }, ["Ingredients"]),
+              element("ul", {}, 
+                recipe.ingredients.map((ingredient) => 
+                  element('li', {}, [`${ingredient.quantity} ${ingredient.item}`])
+                )
+              ),
+              element("h6", { class: "card-subtitle mb-2 text-muted" }, ["Instructions"]),
+              element("ol", {}, 
+                recipe.instructions.map((instruction) => 
+                  element('li', {}, [instruction])
+                )
+              ),
             ]),
           ])
         );
       }
     } else {
-      list.innerText = "";
+      list.innerText = ""; 
     }
   }
 
